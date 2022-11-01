@@ -9,6 +9,18 @@ board = [
     "....##############....",
 ]
 
+board2 = [
+    "......................",
+    "......#############...",
+    "......#...........#...",
+    "......#...........#...",
+    "....#...............#.",
+    "....#...............#.",
+    "....#...............#.",
+    "....#################.",
+]
+
+
 def flood_fill(input_board, old: str, new: str, x: int, y: int):
     """
     Returns board with old values replaced with new values
@@ -40,7 +52,7 @@ def flood_fill(input_board, old: str, new: str, x: int, y: int):
     input_board = flood_fill(input_board,old,new,x,y+1)
     return input_board
 
-modified_board = flood_fill(board, old=".", new="~", x=5, y=12)
+modified_board = flood_fill(board2, old=".", new="~", x=5, y=12)
 
 for a in modified_board:
     print(a)
